@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext,useEffect, useState } from "react";
 import "./header.css";
 import headerusericon from "../../../assets/Headerassets/headerusericon.svg";
 import carticon from "../../../assets/Headerassets/carticon.svg";
 import Bottel from "../../../assets/Headerassets/438945-ff5722 (1).png";
-
+import { isExpired, decodeToken } from "react-jwt";
 import { Link } from "react-router-dom";
-// import { Icon, IconButton } from "@mui/material";
+import { searchContext } from "../../../Context/searchContext";
 
-// import Stack from '@mui/material/Stack';
 export default function Header() {
   // window.addEventListener("scroll", function () {
   //   const header = document.querySelector(".headerm");
@@ -25,16 +24,26 @@ export default function Header() {
   //     "body".removeClass("scrolled"); // Otherwise, remove the 'scrolled' class from the body element
   //   }
   // });
+  const { searchVariable, updateSearchVariable } = useContext(searchContext);
+  var [decodedData, setFullData] = useState();
+
+  const handleChange = (e) => {
+    updateSearchVariable(e.target.value);
+  };  
+  useEffect(() => {
+    var token = localStorage.getItem("token");
+    setFullData(decodeToken(token));
+  }, []);
 
 
   return (
     <div className="headerm">
-  
-      <div
+      <header
         className="cmpny-logo"
         style={{ alignItems: "center", display: "inline-flex", marginTop: 0 }}
       >
-        <img   style={{  height: "68px",marginRight: "-15px", }}
+        <img
+          style={{ height: "68px", marginRight: "-15px" }}
           src={Bottel}
         ></img>
         <span style={{ fontSize: "70px", marginLeft: "0", marginTop: "-15%" }}>
@@ -45,7 +54,7 @@ export default function Header() {
           <br></br>
           <span>𝐵𝒶𝓇</span>
         </div>
-      </div>
+      </header>
 
       <div className="input-search">
         <input
@@ -53,21 +62,32 @@ export default function Header() {
           type="text"
           className="search-input"
           placeholder="  🔍   Search"
-          // onChange={handleChange}
+          onChange={handleChange}
         ></input>
       </div>
 
-      <Link to={"/cart"}>
-        <img src={carticon}></img>
-      </Link>
+      <div   style={{ alignItems: "center", display: "inline-flex", marginTop: 0 }}
+      >
+        <Link to={"/cart"}>
+          <img src={carticon}></img>
+        </Link>
 
-      <Link to="/account">   
-        <img src={headerusericon}></img>
-      </Link>
+        <Link to="/account">
+          <img src={headerusericon}></img>
+        </Link>
 
-      <div className="header-dp">
-        <img // src={"avatar"}
-        ></img>
+        <text style={{ color: "white" }}>{decodedData?.FullName}</text>
+        <div className="header-userdp">
+          <div className="back">
+            <img
+              className="rotate-dp-img"
+              src="https://i.postimg.cc/nhG8H3X6/copywriting.jpg"
+            ></img>
+          </div>
+          <div className="front">
+            <img className="rotate-dp-img" src={decodedData?.avatar} />
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,54 @@
+.feedbackbtn {
+  background-color: rgb(0, 102, 255);
+  color: #ffffff;
+  width: 100px;
+  height: 40px;
+  position: fixed;
+  margin-right: 2%;
+  margin-top: 650px;
+  margin-bottom: auto;
+  text-align: center;
+  z-index: 2225;
+  transform: rotate(-90deg) translate(50%, -50%);
+  /* transform-origin: left; */
+}
+#rrr {
+  margin: 150px auto auto auto;
+  width: 700px;
+  height: max-content;
+  border: solid 1px rgba(44, 59, 75, 0.774);
+  border-radius: 9px;
+  background-color: #ffffff !important;
+  position: relative;
+  z-index: 2000;
+}
+#rrr > h1 {
+  background-color: rgba(37, 50, 63, 0.986);
+  color: #ffffff;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+
+}
+
+.feedback-msg {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.feedback-btn {
+  margin: 20px auto auto 20px;
+  justify-content: center;
+}
+#Cancel-feedback {
+  box-shadow: #222 25px;
+  border: 1px solid #e21212;
+}
+.action-img {
+  border-radius: 4px;
+  width: 130px;
+}
+#Cancel-feedback > span {
+  color: #e21212;
+  font-weight: 500;
+  font-size: medium;
+}

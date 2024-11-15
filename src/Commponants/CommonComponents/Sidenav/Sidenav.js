@@ -15,13 +15,16 @@ export default function Sidenav() {
       <div className="sidenav-container1">
         {/* <header className="navOfHeader" id="mobile-sidenav"> */}
           <ul>
-          <Link to={"/"}><li>Home</li></Link> 
-          <Link><li>2</li></Link> 
-          <Link><li>3</li></Link>  
-          <Link><li>4</li></Link>
-          <Link><li>5</li></Link>
-          <Link><li>6</li></Link> 
-          <Link><li>7</li></Link> 
+          <Link to={"/"}><li>HOME</li></Link> 
+          <Link to={""} ><li>SPIRITS</li></Link> 
+          <Link><li>MIXERS & FRUIT</li></Link>  
+          <Link to={"/champange"}><li>CHAMPAGNE </li></Link>
+          <Link to={"/SPIRITS"}><li>WINE</li></Link>
+          <Link><li>ONSALE</li></Link>
+          <Link><li>BLOG</li></Link> 
+          <Link><li>CONTACT</li></Link> 
+          <Link><li>CLAIMS</li></Link> 
+
           </ul>
         {/* </header> */}
       </div>

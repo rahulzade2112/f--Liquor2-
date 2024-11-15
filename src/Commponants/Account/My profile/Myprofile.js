@@ -1,13 +1,24 @@
 import React from "react";
 import { Button, InputLabel } from "@mui/material";
-// import Typography from '@mui/material/Typography';
 import { TextField, Grid, FormControlLabel, Checkbox } from "@mui/material";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import { styled } from "@mui/material/styles";
 import DeleteIcon from "@mui/icons-material/Delete";
 import "./myprofile.css";
+import axios from "axios";
+import "../../../Utility/Interceptors/ReqInterceptor";
 
-export default function Myprofile() {
+export default function Myprofile(props) {
+  const removeDp = () => {
+    axios.post("http://localhost:8080/removedp").then((res) => {
+      console.log(res);
+      localStorage.removeItem("token");
+      localStorage.setItem("token", res.data.token);
+      window.location.reload();
+
+    });
+  };
+  console.log(props);
   const VisuallyHiddenInput = styled("input")({
     clip: "rect(0 0 0 0)",
     clipPath: "inset(50%)",
@@ -21,11 +32,8 @@ export default function Myprofile() {
   });
 
   return (
-    <div>
+    <div>   
       <React.Fragment>
-        {/* <Typography variant="h6" gutterBottom>
-      Shipping address
-    </Typography> */}
         <Grid container spacing={3}>
           <Grid
             alignContent={"center"}
@@ -43,7 +51,7 @@ export default function Myprofile() {
   <label for="cb5" data-tg-on="Yeah!" data-tg-off="Nope" class="tgl-btn"></label>
 </div> */}
 
-            <img style={{ width: "100px", height: "auto" }} src="" alt="hii" />
+            <img style={{ width: "100px", height: "auto" }} src={props.state.avatar}></img>
           </Grid>
         </Grid>
         <div
@@ -67,11 +75,13 @@ export default function Myprofile() {
             <VisuallyHiddenInput type="file" />
           </Button>
           <Button
+           onClick={removeDp}
             variant="outlined"
             sx={{ color: "red", borderColor: "red" }}
-            startIcon={<DeleteIcon style={{ color: "red" }} />}
+            startIcon={<DeleteIcon
+          style={{ color: "red" }} />}
           >
-            Delete
+            Remove
           </Button>
         </div>
 
@@ -112,8 +122,7 @@ export default function Myprofile() {
               xs={12}
               sm={4}
             >
-              <TextField
-                style={{ marginLeft: "0" }}
+              <TextField    style={{ marginLeft: "0" }}
                 required
                 id="lastName"
                 name="lastName"
@@ -303,6 +312,7 @@ export default function Myprofile() {
           />
         </Grid>
       </React.Fragment>
-    </div>
+     </div>
+ 
   );
 }

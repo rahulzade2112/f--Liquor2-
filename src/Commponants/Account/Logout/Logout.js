@@ -14,7 +14,7 @@ export default function Logout() {
         </div>
 
         <div className="logout-content">
-          <button className="button">
+          <button className="button"  onClick={()=>{localStorage.removeItem("token")}}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="6em"
@@ -33,7 +33,7 @@ export default function Logout() {
             </svg>
           </button>
 
-          <button className="cssbuttons-io-button">
+          <button className="cssbuttons-io-button" onClick={()=>{localStorage.removeItem("token")}}>
             Log Out
             <div className="icon">
               <svg
@@ -70,3 +70,8 @@ export default function Logout() {
     </div>
   );
 }
+
+
+
+
+

@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 // import Webcam from 'react-webcam'
 import { createTheme } from "@mui/material/styles";
@@ -6,9 +5,8 @@ import { Range, initMDB } from "mdb-ui-kit";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import Typography from "@mui/material/Typography";
-
 import image from "../../../assets/dmi.png";
-
+import "./editavatar.css"
 const MIN = 0;
 const MAX = 100;
 const marks = [
@@ -42,6 +40,7 @@ export default function EditAvatar() {
   const vala = val * 5;
   return (
     <div>
+  
       <em
         style={{
           color: "primary",
@@ -52,6 +51,7 @@ export default function EditAvatar() {
           justifyContent: "revert",
           backgroundColor: "gray",
           flexDirection: "row",
+          overflow:"hidden",
           flexWrap: "wrap",
           alignContent: "center",
           justifyContent: "space-evenly",

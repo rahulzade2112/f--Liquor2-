@@ -54,10 +54,17 @@ color: black;
 }
 .sidenav-container{
   width: 100%;
+  margin-top: 5%;
+  position: fixed;
 }
 .header-container{
   width: 100%; 
+  /* position: fixed; */
   border: none;
+}
+.content-container{
+  margin: 0;
+  position: relative;
 }
 
 

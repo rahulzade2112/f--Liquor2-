@@ -20,6 +20,7 @@
 }
 
 
+
 /* .main-header-container.scrolling {
   background-color: rgb(62, 57, 75);
   position: fixed;
@@ -86,22 +87,54 @@ input::after {
   width: 300px;
   padding: 10px;
 } */
-.header-dp {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  align-content: center;
-}
-.header-dp>img{
-  height: 55px;
-  width: 55px;
-  margin: auto 0 auto 0 ;
-  border-radius: 50%;
-}
+
 .navbar {
   overflow: hidden;
   background-color: #333;
 }
+
+.header-userdp {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  align-content: center;
+  float: left; /*stack each div horizontally*/
+  overflow: hidden;
+  margin-top: 0;
+  justify-content: center;
+}
+.rotate-dp-img{
+       height: 55px;
+    width: 55px;
+    margin: auto 0 auto 0;
+    border-radius: 50%;
+}
+.front,.back{
+ position: absolute;
+  height: 55px;
+  width: 55px;
+}
+.header-userdp > .front {
+  transform: perspective(600px) rotateY(0deg);
+  background-color: aquamarine;
+  border-radius: 50%;
+  backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+  transition: transform 0.5s linear 0s;
+}
+/* style the header-userdp class with all child div's of class .back */
+.header-userdp > .back {
+  transform: perspective(600px) rotateY(180deg);
+  border-radius: 10px;backface-visibility: hidden; 
+  transition: transform 0.5s linear 0s;
+}
+.header-userdp:hover > .front {
+  transform: perspective(600px) rotateY(-180deg);
+}
+.header-userdp:hover > .back {
+  transform: perspective(600px) rotateY(0deg);
+}
+
+
 
 /* .navbar a {
         float: left;
