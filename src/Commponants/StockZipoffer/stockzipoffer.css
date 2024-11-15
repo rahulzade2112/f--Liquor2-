@@ -1,0 +1,14 @@
+.zip{
+/* text-align: center; */
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+background:#312d3f ;
+height: 25px;
+color: #FFFFFF;
+margin: 0;
+text-align: center;
+font-size:smaller;
+text-wrap:stable;
+/* filter:brightness(0.8); */
+
+
+}

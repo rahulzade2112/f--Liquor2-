@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,33 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+body{
+  margin: 0;
+  padding: 0%;
+  background-color: #efefef !important;
+color: black;
 }
+/* .content-container{
+  margin-top: 60px;
+} */
+
+.app-container{
+  display: flex;
+  width: 100%;
+}
+.sidenav-container{
+  width: 100%;
+}
+.header-container{
+  width: 100%; 
+  border: none;
+}
+
+
+/*
+.main-container{
+  width: 85%;
+} */

@@ -1,0 +1,34 @@
+/* 
+.Ac-bg-banner {
+  margin: 0;
+  padding: 0;
+  height: 100% !important;
+  width: 100% !important;
+  position: fixed;
+} */
+
+.Ac-Nav-container{
+  background-color: #bdba31;
+  /* width: fit-content; */
+  border-top-right-radius: 5px;
+}
+
+.Ac-nav-icon{
+  /* margin-left:auto; */
+  /* padding-right: auto; */
+  padding-top: 7px;
+  color: #ffffff;
+  align-items:center ;
+    width:30px;
+  padding-left:8x;
+     height:30px;
+}
+
+.Ac-nav-content{
+color: white;
+}
+/* :nth-child(10){
+  padding-top: 100%;
+  padding-bottom:50px;
+} */
+

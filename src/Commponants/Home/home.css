@@ -1,0 +1,79 @@
+.header-carousel{
+    width: 100%;
+filter:brightness(0.7);
+/* position: absolute; */
+}
+.main-container{
+    height: max-content;
+}
+
+
+/*
+
+
+.login-container{
+    height: 80%; 
+    width: 30%;
+    position: absolute;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    color: #fff;
+    flex-wrap: nowrap;
+    border: 1px solid #ffffff; 
+    margin-top: 5%;
+    /* padding: 0; */
+   /* margin-left: 55%;
+    margin-right: 8%;
+  flex-direction:column ;
+    justify-content: center ;
+  
+  }
+  /*
+  .bg-img {
+    /* align-items: center; */
+    /* align-content: center; */
+   /* display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    filter: brightness(1.15) !important;
+  }
+  .login-content {
+    justify-content: space-evenly;
+    border: 1px solid;
+    border-radius: 8px;
+    width: 391px;
+    height: 75%;
+    padding: 2%;
+    background: transparent;
+    background-color: #ffffff rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(5px) !important;
+  }
+  
+  .signup-G-container {
+    width: 300px;
+    height: 60px;
+    border: 1px solid #ffffff; 
+    margin-top: 2%;
+  }
+  .signG-icon {
+    width: 60%;
+    height: 100px; 
+  }
+  
+  .textfield {
+    color: #fff !important;
+  }
+  .TField {
+    border-bottom: 2px solid rgb(255, 255, 255) !important;
+    width: 330px;
+  }
+  
+  .display_picture {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+  }
+   
+*/

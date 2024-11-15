@@ -1,0 +1,10 @@
+.address-container{
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 8px;
+    /* background: red; */
+}
